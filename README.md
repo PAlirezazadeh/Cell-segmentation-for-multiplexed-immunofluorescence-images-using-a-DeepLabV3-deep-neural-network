@@ -3,13 +3,13 @@
 ---
 
 ### Environment
-conda create -n MELC python=3.9
-conda activate MELC
-conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.3 -c pytorch
-pip install -r requirements.txt
+conda create -n MELC python=3.9  
+conda activate MELC  
+conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.3 -c pytorch  
+pip install -r requirements.txt  
 
 ### Notes
-The deeplab_mobilenetv2.pth and deeplab_xception.pth files in the code are trained on the VOC extended dataset. Remember to adjust the backbone when training and predicting.
+The deeplab_mobilenetv2.pth and deeplab_xception.pth files in the code are trained on the VOC extended dataset. Remember to adjust the backbone when training and predicting.  
 
 ### Training Steps
 1. This document uses VOC format for training.
