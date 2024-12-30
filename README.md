@@ -25,39 +25,39 @@ The deeplab_mobilenetv2.pth and deeplab_xception.pth files in the code are train
 1. Train according to the training steps.
 2. In deeplab.py, modify model_path, num_classes, and backbone to match the trained files. model_path corresponds to the weight file in the logs folder, num_classes is the number of classes to predict +1, and backbone is the backbone feature extraction network used.
 
-_defaults = {
-    #----------------------------------------#
-    #   model_path points to the weight file in the logs folder
-    #----------------------------------------#
-    "model_path"        : 'model_data/deeplab_mobilenetv2.pth',
-    #----------------------------------------#
-    #   Number of classes to differentiate +1
-    #----------------------------------------#
-    "num_classes"       : 2,
-    #----------------------------------------#
-    #   Backbone network used
-    #----------------------------------------#
-    "backbone"          : "mobilenet",
-    #----------------------------------------#
-    #   Input image size
-    #----------------------------------------#
-    "input_shape"       : [512, 512],
-    #----------------------------------------#
-    #   Downsampling factor, generally 8 or 16
-    #   Must match the training setting
-    #----------------------------------------#
-    "downsample_factor" : 16,
-    #--------------------------------#
-    #   blend parameter controls whether
-    #   to blend the recognition result with the original image
-    #--------------------------------#
-    "blend"             : True,
-    #-------------------------------#
-    #   Whether to use Cuda
-    #   Set to False if no GPU is available
-    #-------------------------------#
-    "cuda"              : True,
-}
+_defaults = {  
+    #----------------------------------------#  
+    #   model_path points to the weight file in the logs folder  
+    #----------------------------------------#  
+    "model_path"        : 'model_data/deeplab_mobilenetv2.pth',  
+    #----------------------------------------#  
+    #   Number of classes to differentiate +1  
+    #----------------------------------------#  
+    "num_classes"       : 2,  
+    #----------------------------------------#  
+    #   Backbone network used  
+    #----------------------------------------#  
+    "backbone"          : "mobilenet",  
+    #----------------------------------------#  
+    #   Input image size  
+    #----------------------------------------#  
+    "input_shape"       : [512, 512],  
+    #----------------------------------------#  
+    #   Downsampling factor, generally 8 or 16  
+    #   Must match the training setting  
+    #----------------------------------------#  
+    "downsample_factor" : 16,  
+    #--------------------------------#  
+    #   blend parameter controls whether  
+    #   to blend the recognition result with the original image  
+    #--------------------------------#  
+    "blend"             : True,  
+    #-------------------------------#  
+    #   Whether to use Cuda  
+    #   Set to False if no GPU is available  
+    #-------------------------------#  
+    "cuda"              : True,  
+}  
 
 3. Run predict.py, input:
 img/image_20220321_FOV3.jpg
